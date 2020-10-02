@@ -1,8 +1,10 @@
 import React, {Component} from "react";
 import Card from "./components/Card";
 import Navbar from "./components/Navbar";
+import request from 'superagent';
 import "./index.css";
-const axios = require('axios').default;
+
+
 
 class App extends Component {
   state = {
@@ -14,14 +16,14 @@ class App extends Component {
     total: 34
   };
 
-  componentWillMount(){
-    axios.get(`localhost:5000/getdata`)
-      .then(res => {
-        const orders = res.data;
-        this.setState({ orders });
-
-      })
+  componentDidMount() {
+    request
+    .get('http://localhost:5000/getdata')
+    .end(function (err, res) {
+      console.log(res);
+    });
   }
+
 
   render() {
     return (

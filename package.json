@@ -19,6 +19,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "request": "^2.88.2",
+    "superagent": "^6.1.0",
     "webpack": "^4.44.2"
   },
   "scripts": {
