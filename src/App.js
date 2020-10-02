@@ -17,8 +17,8 @@ class App extends Component {
   componentWillMount(){
     axios.get(`localhost:5000/getdata`)
       .then(res => {
-        const persons = res.data;
-        this.setState({ persons });
+        const orders = res.data;
+        this.setState({ orders });
 
       })
   }
