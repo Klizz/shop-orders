@@ -4,8 +4,6 @@ import Navbar from "./components/Navbar";
 import "./index.css";
 const axios = require('axios').default;
 
-const endpoint = '/getdata'
-
 class App extends Component {
   state = {
     id: 9,
@@ -16,11 +14,12 @@ class App extends Component {
     total: 34
   };
 
-  componentDidMount(){
-    axios.get(`localhost:5000`)
+  componentWillMount(){
+    axios.get(`localhost:5000/getdata`)
       .then(res => {
         const persons = res.data;
         this.setState({ persons });
+
       })
   }
 
