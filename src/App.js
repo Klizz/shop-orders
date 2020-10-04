@@ -1,9 +1,7 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Card from "./components/Card";
 import Navbar from "./components/Navbar";
 import "./index.css";
-
-
 
 class App extends Component {
   state = {
@@ -14,14 +12,6 @@ class App extends Component {
     shop: 0,
     total: 0,
   };
-
-  /* componentDidMount() {
-    request
-    .get('http://localhost:5000/getdata')
-    .end(function (err, res) {
-      console.log(res.req);
-    });
-  } */
 
   componentDidMount() {
     fetch(`http://localhost:5000/getdata`)
