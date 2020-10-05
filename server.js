@@ -9,7 +9,7 @@ const key = process.env.TOKEN;
 app.use(cors());
 
 // GET DATA FROM ALL ORDERS
-const url = `http://${key}@18.219.54.186/api/orders?output_format=JSON`;
+const url = `http://${key}@18.219.54.186/api/orders/1?output_format=JSON`;
 app.get("/getdata", (req, res, next) => {
   request.get(url, (err, response) => {
     console.log(err);
